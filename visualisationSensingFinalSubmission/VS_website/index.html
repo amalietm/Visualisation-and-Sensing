@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="V_S.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+
+<div class="grid-container">
+    <div class="itemOne"> 
+        <h1>Visualisation of dedications</h1>
+        <p>Data has been collected as to who authors most often dedicated their books to. 
+            This data is being visualised in the form of graphs and creative maps.</p>
+        <p>Hover over graphs to see labels.</p>
+    </div>
+    <div class="itemTwo"> 
+        <canvas id="donut_chart" style="width:100%;max-width:600px"></canvas>
+    </div>
+    <div class="itemThree"> 
+        <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
+    </div>
+</div>
+<div class="nextButton">
+    <a href="creativeMaps.html">
+        <img src="pics/right-arrow.png" width="50px">
+    </a>
+</div>
+
+<script class="donutChart">
+    var xValues = ["Others", "Spouse", "Parents", "Readers","Famous people", "Characters", "Children", "Me", "Other family", "Editor", "Pets", "Nobody"];
+    var yValues = [37, 17, 15, 7, 6, 5, 4, 4, 3, 2, 2, 2];
+    var barColors = [
+    "#f9ad3f",
+    "#97cf8f",
+    "#5489c7",
+    "#ef3d3d",
+    "#62cae2",
+    "#ece60e",
+    "#17773c",
+    "#ed6323",
+    "#c3e8f3",
+    "#cb82b7",
+    "#64689b",
+    "#a12424"
+    ];
+
+    new Chart("donut_chart", {
+    type: "doughnut",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Dedicated to -"
+        }
+    }
+    });
+</script>
+
+<script>
+    new Chart(document.getElementById("barChart"), {
+        type: 'horizontalBar',
+        data: {
+            labels: [
+                "Others", 
+                "Spouse", 
+                "Parents", 
+                "Readers", 
+                "Famous people", 
+                "Characters", 
+                "Children", 
+                "Me", 
+                "Other family", 
+                "Editor", 
+                "Pets", 
+                "Nobody"
+            ],
+            datasets: [{
+                label: "Dedications:",
+                backgroundColor: [
+                    "#f9ad3f",
+                    "#97cf8f",
+                    "#5489c7",
+                    "#ef3d3d",
+                    "#62cae2",
+                    "#ece60e",
+                    "#17773c",
+                    "#ed6323",
+                    "#c3e8f3",
+                    "#cb82b7",
+                    "#64689b",
+                    "#a12424"
+                    ],
+              data: [37, 17, 15, 7, 6, 5, 4, 4, 3, 2, 2, 2]
+            }
+          ]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: "Dedicated to -"
+            },
+            scales:
+            {
+                // yAxes: [{
+                //     display: false
+                // }],
+                xAxes: [{
+                    display: false
+                }]
+            }
+        }
+    });
+    </script>
+           
+
+</body>
+
+</html>
