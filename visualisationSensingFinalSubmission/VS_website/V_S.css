@@ -1,0 +1,115 @@
+
+
+.itemOne { grid-area: heading; }
+.itemTwo { grid-area: donut; }
+.itemThree { grid-area: bar; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    '... bar'
+    'heading donut';
+  grid-gap: 10px;
+  padding: 10px;
+  margin-left: 2rem;
+}
+
+.grid-container div {
+    margin-bottom: 2rem;
+}
+
+.itemOne {
+    font-family: "helvetica";
+    width: 500px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.nextButton {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+}
+
+.nextButton:hover {
+  opacity: 0.5;
+}
+
+.itemOne2 { grid-area: heading; }
+.itemTwo2 { grid-area: map; }
+
+.grid-container2 {
+  display: grid;
+  grid-template-areas:
+    '... map'
+    'heading map';
+  grid-gap: 10px;
+  padding: 10px;
+  margin-left: 2rem;
+}
+
+.itemTwo2 {
+  margin-right: 2rem;
+}
+
+
+
+
+
+
+
+
+.fun-facts section {
+  display: flex;
+  flex-direction: row;
+}
+
+.fun-facts section div.text {
+  padding-right: 60px;
+  padding-left: 190px;
+  width: 60%;
+}
+
+.fun-facts section div.full-image {
+  height: 30vh;
+  /* background-image: url(img/fun_facts_heading.png); */
+  background-size: contain;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 55%;
+  margin-left: 3rem;
+  width: 40%;
+  font-family: "helvetica";
+  font-size: 22px;
+}
+
+.fun-facts section div.full-image img {
+  margin-top: 8rem;
+}
+
+.fun-facts section div.full-image img:hover {
+  opacity: 0.5;
+}
+
+.scrollDown {
+  position: sticky;
+  display: inline-block;
+  bottom: 1rem;
+  left: 82%;
+}
+
+.scrollP {
+  display: inline-block;
+  font-family: "helvetica";
+  padding: 1rem;
+  /* padding: 10px; */
+}
+
+.downArrow {
+  display: inline-block;
+  padding: 1rem;
+  /* width: 100px; */
+}
+
